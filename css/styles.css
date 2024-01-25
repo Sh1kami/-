@@ -9,7 +9,9 @@
 
 /* BASE */
 
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
@@ -46,6 +48,10 @@ address {
 
 img {
     pointer-events: none;
+}
+
+a {
+    display: inline-block;
 }
 
 .visually-hidden {
@@ -178,6 +184,7 @@ img {
     padding: 0;
     cursor: pointer;
     fill: var(--color-primary-dark);
+    flex-shrink: 0;
 }
 
 .carousel-button:hover {
@@ -187,6 +194,12 @@ img {
 
 .format-item {
     flex-basis: calc((100% - 40px) / 3);
+}
+
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
 }
 
 /* advantages */
@@ -267,6 +280,28 @@ img {
     box-shadow: -16px 16px 0 0 var(--color-primary-ligth), -16px 16px 0 2px var(--color-secondary-line);
 }
 
+.chef-text p {
+    margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+    margin-bottom: 0;
+}
+
+.chefs-list {
+    display: flex;
+    gap: 40px 30px;
+}
+
+.chefs-item {
+    flex-basis: calc(100% - 30px / 2);
+}
+
+.chef-card {
+    display: flex;
+    gap: 30px;
+}
+
 /* formats section */
 .format-title {
     font-size: 24px;
@@ -279,6 +314,21 @@ img {
     font-weight: 300;
 }
 /* 'footer' */
+
+.contact-section {
+    padding-bottom: 96px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
 
 .adress-link {
     color: var(--color-primary-ligth);
@@ -300,6 +350,40 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 32px 0;
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-logo {
+    flex-grow: 1;
+}
+
+.footer-logo-inside {
+    display: inline-flex;
+}
+
+.footer-menu {
+    flex-grow: 1;
+}
+
+.footer-adres {
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.adres-list {
+    flex-grow: 1;
 }
 
 .adress-link:hover {
@@ -307,6 +391,10 @@ img {
     font-size: 16px;
     font-weight: 300;
     text-decoration: none;
+}
+
+.adres-info {
+    flex-grow: 1;
 }
 
 .dress-copyright {
