@@ -4,7 +4,7 @@
     --color-primary-dark: #31261a;
     --color-brand-dark: #465929;
     --color-brand-line: #cfcfbc;
-    --color-secondary-line: #a18268;
+    --color-secondary-line: #a28268;
 }
 
 /* BASE */
@@ -54,6 +54,22 @@ a {
     display: inline-block;
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: rgba(129, 155, 87, 0.5); /* Цвет фона */
+}
+
 .visually-hidden {
     position: absolute;
     left: -10000px;
@@ -86,6 +102,7 @@ a {
     cursor: pointer;
     font-weight: 600;
     padding: 16px 32px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .button:hover {
@@ -103,6 +120,7 @@ a {
     color: var(--color-primary-ligth);
     text-decoration: none;
     line-height: 1.5;
+    transition: color 0.3s;
 }
 
 .link:hover {
@@ -114,6 +132,14 @@ a {
 
 .logo {
     display: flex;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    padding-top: 32px;
 }
 
 .header-nav {
@@ -140,7 +166,7 @@ a {
 
 .hero-section {
     padding: 272px 0;
-    background-image: url('../images/hero-section-background.jpg');
+    background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url('../images/hero-section-background.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -164,6 +190,11 @@ a {
     border: 1px solid var(--color-primary-dark);
     padding: 24px;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
+    transition: transform 0.3s;
+}
+
+.format-card:hover {
+    transform: scale(1.05);
 }
 
 .formats-list {
@@ -185,6 +216,10 @@ a {
     cursor: pointer;
     fill: var(--color-primary-dark);
     flex-shrink: 0;
+}
+
+.carousel-button.next {
+    transform: rotate(180deg);
 }
 
 .carousel-button:hover {
@@ -456,14 +491,20 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 0;
+    transition: opacity 0.3s, visibility 0.3s;
 }
 
 .modal {
-    width: 880px;
-    height: 880px;
+    width: 100%;
+    height: 100%;
+    max-width: 880px;
+    max-height: 880px;
     background-color: var(--color-primary-ligth);
     border-radius: 32px;
     position: relative;
+    padding: 128px;
+    overflow: auto;
 }
 
 .backdrop.is-hidden {
@@ -478,4 +519,60 @@ a {
     right: 40px;
     width: 32px;
     height: 32px;
+}
+
+/* form */
+
+.form-field {
+    margin-bottom: 32px;
+}
+
+.form-label {
+    display: block;
+}
+
+.form-input {
+    font-size: 16px;
+    line-height: 1.17;
+    color: var(--color-primary-dark);
+    padding: 16px 42px;
+    width: 100%;
+    border: 1px solid var(--color-secondary-line);
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.form-input:focus {
+    border-color: var(--color-brand);
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: var(--color-secondary-line);
+    font-size: 16px;
+    line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+    color: var(--color-primary-dark);
+}
+
+.form-button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+.form-terms {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 220px;
+}
+
+.form-terms-link {
+    color: var(--color-primary-dark);
+    text-underline-offset: 2px;
 }
