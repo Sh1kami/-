@@ -11,6 +11,7 @@
     cursor: pointer;
     fill: var(--color-primary-dark);
     flex-shrink: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .carousel-button.next {
