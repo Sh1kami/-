@@ -140,6 +140,12 @@ html {
     width: 100%;
     position: absolute;
     padding-top: 32px;
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
 }
 
 .header-nav {
@@ -154,12 +160,6 @@ html {
     gap: 64px;
     flex-grow: 1;
     justify-content: center;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
 }
 
 /* hero */
