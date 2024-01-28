@@ -1,0 +1,51 @@
+.adress-link {
+    color: var(--color-primary-ligth);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.address-icon {
+    fill: var(--color-primary-ligth);
+}
+
+.address-icon:hover {
+    fill: var(--color-brand);
+}
+.adres-list {
+    flex-grow: 1;
+}
+
+.adress-link:hover {
+    color: var(--color-brand-dark);
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.adres-info {
+    flex-grow: 1;
+}
+.adress-copyright {
+    font-size: 14px;
+}
+.footer::before {
+    position: absolute;
+    background-image: url('../images/decor-bread-small.png');
+    content: '';
+    width: 180px;
+    height: 120px;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+}
+
+.footer::after {
+    position: absolute;
+    background-image: url('../images/decor-bread-large.png');
+    content: '';
+    width: 380px;
+    height: 190px;
+    background-repeat: no-repeat;
+    bottom: 0;
+    right: 0;
+}
