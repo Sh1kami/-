@@ -576,3 +576,31 @@ html {
     color: var(--color-primary-dark);
     text-underline-offset: 2px;
 }
+
+/* .checkbox-input {
+    appearance: none;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+    background-color: var(--color-brand);
+}
+
+.checkbox-label {
+    padding-left: 24px;
+}
+
+.checkbox {
+    position: relative;
+}
+
+.checkbox-label::before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 5px;
+    left: 0;
+    top: 0;
+    margin-top: 5px;
+} */

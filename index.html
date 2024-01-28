@@ -169,15 +169,15 @@
                             <form name="order-call-form" autocomplete="off">
                                 <div class="form-field">
                                     <label class="form-label visually-hidden" for="user-name">Ім'я</label>
-                                    <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім'я" />
+                                    <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім'я" minlength="2" maxlength="20" required />
                                 </div>
                                 <div class="form-field">
                                     <label class="form-label visually-hidden" for="user-tel">Телефон</label>
-                                    <input class="form-input" type="tel" name="user-tel" id="user-tele" placeholder="Телефон" />
+                                    <input class="form-input" type="tel" name="user-tel" id="user-tele" placeholder="Телефон" maxlength="13" required />
                                 </div>
                                 <div class="form-field">
                                     <label class="form-label visually-hidden" for="user-email">Елктронна пошта</label>
-                                    <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Елктронна пошта" />
+                                    <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Елктронна пошта" required />
                                 </div>
                                 <button class="button form-button" type="submit">Замовити дзвінок</button>
                                 <p class="form-terms">Натискаючи на кнопку я погоджуюсь з <a class="form-terms-link" href="#">політикою конфіденційності</a></p>
@@ -249,24 +249,30 @@
                 <button class="modal-btn-close" type="button">Close</button>
                 <h2>Замовити дзвінок</h2>
                 <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-                <form name="modal-form" autocomplete="off" novalidate>
+                <form name="modal-form" autocomplete="off">
                     <div class="form-field">
                         <label class="form-label visually-hidden" for="user-name">Ім'я</label>
-                        <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім'я" />
+                        <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім'я" minlength="2" maxlength="20" required />
                     </div>
                     <div class="form-field">
                         <label class="form-label visually-hidden" for="user-tel">Телефон</label>
-                        <input class="form-input" type="tel" name="user-tel" id="user-tele" placeholder="Телефон" />
+                        <input pattern="^\+[0-9]{12}" class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Телефон" maxlength="13" required />
                     </div>
                     <div class="form-field">
                         <label class="form-label visually-hidden" for="user-email">Елктронна пошта</label>
-                        <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Елктронна пошта" />
+                        <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Елктронна пошта" required />
                     </div>
+                    <!-- <div class="checkbox">
+                        <input class="checkbox-input visually-hidden" type="checkbox" name="terms-conditions" id="terms-conditions" />
+                        <label class="checkbox-label" for="terms-conditions">Я точно погоджуюсь з політикою конфіденційності</label>
+                    </div> -->
                     <button class="button form-button" type="submit">Замовити дзвінок</button>
                     <p class="form-terms">Натискаючи на кнопку я погоджуюсь з <a class="form-terms-link" href="#">політикою конфіденційності</a></p>
                 </form>
             </div>
         </div>
         <script src="./js/modal.js"></script>
+        <script src="./js/form-user-tel.js"></script>
+        <script src="./js/form-user-name.js"></script>
     </body>
 </html>
