@@ -1,55 +1,31 @@
-.chef-title {
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 16px;
-}
+.chefs-section {
+    &__title {
+        position: relative;
+        margin: 0 auto 80px;
 
-.chefs-title {
-    position: relative;
-    margin: 0 auto 80px;
-    /* max-width: 520px; */
-}
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            width: 352px;
+            border: 2px solid var(--color-brand-line);
+            bottom: 24px;
+        }
+        &::after {
+            right: 0;
+        }
 
-.chefs-title::after,
-.chefs-title::before {
-    content: '';
-    position: absolute;
-    width: 352px;
-    border: 2px solid var(--color-brand-line);
-    bottom: 24px;
-}
+        &::before {
+            left: 0;
+        }
+    }
 
-.chefs-title::after {
-    right: 0;
-}
+    &__list {
+        display: flex;
+        gap: 40px 30px;
+    }
 
-.chefs-title::before {
-    left: 0;
-}
-
-.chef-photo {
-    border-radius: 4px 4px 4px 200px;
-    box-shadow: -16px 16px 0 0 var(--color-primary-ligth), -16px 16px 0 2px var(--color-secondary-line);
-}
-
-.chef-text p {
-    margin-bottom: 24px;
-}
-
-.chef-text p:last-child {
-    margin-bottom: 0;
-}
-
-.chefs-list {
-    display: flex;
-    gap: 40px 30px;
-}
-
-.chefs-item {
-    flex-basis: calc(100% - 30px / 2);
-}
-
-.chef-card {
-    display: flex;
-    gap: 30px;
+    &__item {
+        flex-basis: calc(100% - 30px / 2);
+    }
 }

@@ -4,6 +4,7 @@
 @import './_base.scss';
 
 @import './utils/_utils.scss';
+@import './utils/texts.scss';
 
 @import './components/_section.scss';
 @import './components/_container.scss';
@@ -12,15 +13,18 @@
 @import './components/_header.scss';
 @import './components/_hero-section.scss';
 @import './components/_formats-section.scss';
+@import './components/fotmat-card.scss';
 @import './components/_carousel.scss';
 @import './components/_advantages.scss';
-@import './components/_traditions.scss';
+@import './components/_traditions-section.scss';
 @import './components/_chefs.scss';
+@import './components/_chef-card.scss';
 @import './components/_contact-section.scss';
 @import './components/_adress.scss';
 @import './components/_footer.scss';
 @import './components/_modal.scss';
 @import './components/_form.scss';
+@import './components/_form_terms.scss';
 
 @import './utils/mixins.scss';
 
