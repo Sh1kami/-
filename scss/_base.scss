@@ -47,18 +47,17 @@ a {
     display: inline-block;
 }
 
-body::-webkit-scrollbar {
-    width: 0;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: transparent;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 ::selection {
     background: rgba(129, 155, 87, 0.5);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }

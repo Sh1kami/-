@@ -5,11 +5,16 @@
 
         &::after,
         &::before {
+            display: none;
             content: '';
             position: absolute;
             width: 352px;
             border: 2px solid var(--color-brand-line);
             bottom: 24px;
+
+            @media screen and (min-width: $bp-desktop) {
+                display: block;
+            }
         }
         &::after {
             right: 0;
@@ -22,10 +27,19 @@
 
     &__list {
         display: flex;
-        gap: 40px 30px;
+        flex-direction: column;
+        // flex-wrap: wrap;
+        gap: 20px;
+
+        @media screen and (min-width: $bp-tablet) {
+            gap: 40px 30px;
+            flex-direction: row;
+        }
     }
 
     &__item {
-        flex-basis: calc(100% - 30px / 2);
+        @media screen and (min-width: $bp-tablet) {
+            flex-basis: calc(100% - 30px / 2);
+        }
     }
 }

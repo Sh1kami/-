@@ -4,35 +4,90 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
     padding: 32px 0;
     position: relative;
-}
 
-.footer-container {
-    display: flex;
-    gap: 20px;
-}
+    &__container {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
 
-.footer-nav {
-    flex-basis: 50%;
-    display: flex;
-    gap: 20px;
-}
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+        }
+    }
+    &__nav,
+    &__address {
+        flex-direction: column;
+        display: flex;
+        gap: 20px;
+        text-align: center;
 
-.footer-logo {
-    flex-grow: 1;
-}
+        @media screen and (min-width: $bp-tablet) {
+            flex-basis: 50%;
+            flex-direction: row;
+            text-align: left;
+        }
+    }
+    &__logo {
+        flex-grow: 1;
+    }
+    &__menu {
+        flex-grow: 1;
+    }
 
-.footer-logo-inside {
-    display: inline-flex;
-}
+    &__address-link {
+        color: var(--color-primary-ligth);
+        font-size: 16px;
+        font-weight: 300;
+    }
 
-.footer-menu {
-    flex-grow: 1;
-}
+    &__address-icon {
+        fill: var(--color-primary-ligth);
+    }
 
-.footer-adres {
-    flex-basis: 50%;
-    display: flex;
-    gap: 20px;
+    &__address-icon:hover {
+        fill: var(--color-brand);
+    }
+    &__address-list {
+        flex-grow: 1;
+    }
+
+    &__address-link:hover {
+        color: var(--color-brand-dark);
+        font-size: 16px;
+        font-weight: 300;
+        text-decoration: none;
+    }
+
+    &__address-info {
+        flex-grow: 1;
+    }
+    &__address-copyright {
+        font-size: 14px;
+    }
+    &::before {
+        position: absolute;
+        background-image: url('../images/decor-bread-small.png');
+        content: '';
+        width: 180px;
+        height: 120px;
+        background-repeat: no-repeat;
+        bottom: 0;
+        left: 0;
+    }
+
+    &::after {
+        position: absolute;
+        background-image: url('../images/decor-bread-large.png');
+        content: '';
+        width: 380px;
+        height: 190px;
+        background-repeat: no-repeat;
+        bottom: 0;
+        right: 0;
+    }
+    &__address-contacts {
+    }
 }
