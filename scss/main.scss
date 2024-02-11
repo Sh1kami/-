@@ -1,59 +1,28 @@
-@import './utils/_fonts.scss';
-@import './utils/_variables.scss';
+@import './utils/fonts';
+@import './utils/variables';
+@import './base';
+@import './utils/texts';
+@import './utils/utils';
+@import './utils/mixins';
 
-@import './_base.scss';
+@import './components/buttons';
+@import './components/carousel-button';
+@import './components/chef-card';
+@import './components/format-card';
+@import './components/input';
+@import './components/links';
+@import './components/pagination';
 
-@import './utils/_utils.scss';
-@import './utils/texts.scss';
-
-@import './components/_mobile-menu.scss';
-@import './components/_section.scss';
-@import './components/_container.scss';
-@import './components/_buttons.scss';
-@import './components/_links.scss';
-@import './components/_header.scss';
-@import './components/_hero-section.scss';
-@import './components/_formats-section.scss';
-@import './components/fotmat-card.scss';
-@import './components/_carousel.scss';
-@import './components/_advantages.scss';
-@import './components/_traditions-section.scss';
-@import './components/_chefs.scss';
-@import './components/_chef-card.scss';
-@import './components/_contact-section.scss';
-@import './components/_adress.scss';
-@import './components/_footer.scss';
-@import './components/_modal.scss';
-@import './components/_form.scss';
-@import './components/_form_terms.scss';
-@import './components/_pagination.scss';
-
-@import './utils/mixins.scss';
-
-/* .checkbox-input {
-    appearance: none;
-}
-
-.checkbox-input:checked + .checkbox-label::before {
-    background-color: var(--color-brand);
-}
-
-.checkbox-label {
-    padding-left: 24px;
-}
-
-.checkbox {
-    position: relative;
-}
-
-.checkbox-label::before {
-    position: absolute;
-    content: '';
-    width: 16px;
-    height: 16px;
-    border: 1px solid var(--color-primary-dark);
-    border-radius: 5px;
-    left: 0;
-    top: 0;
-    margin-top: 5px;
-} */
+@import './layouts/section';
+@import './layouts/advantages-section';
+@import './layouts/chefs-section';
+@import './layouts/contact-section';
+@import './layouts/container';
+@import './layouts/footer';
+@import './layouts/form-terms';
+@import './layouts/formats-section';
+@import './layouts/header';
+@import './layouts/hero-section';
+@import './layouts/mobile-menu';
+@import './layouts/modal';
+@import './layouts/traditions-section';
